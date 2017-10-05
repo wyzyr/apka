@@ -1,0 +1,20 @@
+http://opencv.org/releases.html
+1) Pobierz Wina Pack. (Wersja najlepiej najnowsza)
+2) Wypakuj (Double click na exe jaki siê sci¹gnie) najlepiej na root'a (Dysk z win)
+3) WejdŸ w zaawansowane ustawienia systemu aby dodaæ zmienn¹ œrodowiskow¹
+4) Dodaj do PATH nowa zmienn¹, i wklej jako now¹ zmienn¹ œcie¿kê: (Miejsce gdzie wypakowa³eœ opencv)\build\x64\vc14\bin\
+5) Kliknij OK
+6) Odpal Visual Studio
+7) Utwórz nowy pusty projekt: visual c++/win32 console aplication     (gdzie chcesz)
+8) Mo¿esz utworzyc nowy plik .cpp je¿eli takowy sie nie utworzy który bêdzie twoim Main
+9) Zmien debugowanie na tryb x64
+10) Kliknij prawym na nazwie projektu z prawej strony i wejdŸ w preferencje/ustawienia/w³aœciwoœci (nie pamiêtam nazwy :P)
+11) WejdŸ w zakaldke "C/C++" i podzak³adkê "Ogólne"(general ang.)
+12) Do linijki "Dodatkowe katalogi do³¹czenia"(Additional include directories ang.) dodaj œcie¿kê:    (Miejsce gdzie wypakowa³eœ opencv)\build\include   Kliknij zatwierdŸ. Aby przycisk zatwierdŸ siê aktywowa³ nalezy odklikn¹c dan¹ linijke i chwilkê poczekac.
+13) W podzak³adce "Prekompilowane nag³ówki" ustaw aby nie by³y one u¿ywane (Pierwsza linijka) Kliknij zatwierdŸ
+14) PrzejdŸ do zak³adki "Konsolidator"(Linker ang.) i w podzakladkê "ogólne"(general ang.)
+15) Do linijki "Dodatkowe katalogi biblioteki" dodaj œcie¿kê:   (Miejsce gdzie wypakowa³eœ opencv)\build\x64\vc14\lib   Kliknij zatwierdŸ
+16) PrzejdŸ do podzak³adki "Dane wejœciowe" (Input ang.) i w linijce "Dodatkowe zaleznoœci" (Additional dependencies ang.) kliknij strz¹³kê, Nastêpnie "Edytuj"(Edit ang.).
+17) W puste pole wklej nazwê "opencv_world320d.lib" Jest to plik z folderu   (Miejsce gdzie wypakowa³eœ opencv)\build\x64\vc14\lib  ISTOTNE ABY TO BY£ PLIK Z "d" NA KOÑCU. Kliknij ZatwierdŸ
+18) na pocz¹tku pliku dodaj #include<opencv2/opencv>
+19) using namespace cv;
